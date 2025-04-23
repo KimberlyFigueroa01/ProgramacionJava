@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprende Java con Kimberly Figiueroa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: hsl(221, 52%, 58%);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover, nav a.active {
+      background-color: #575757;
+    }
+    section {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: white;
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 7px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 800px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Aprende Java desde Cero</h1>
+    <p>Por Kimberly Figueroa</p>
+  </header>
+
+  <nav id="navbar">
+    <a href="#inicio">Inicio</a>
+    <a href="#Programacion">Programación</a>
+    <a href="#java">Java Básico</a>
+    <a href="#ejercicios">Ejercicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <div class="card">
+      <h2>Bienvenido/a</h2>
+      <p>Te ayudaré a aprender Java desde cero, de una manera sencilla, práctica y paso a paso.
+        Aprenderas sobre la sintaxis de Java, variables, tipos de datos, operadores, estructuras de control y mucho más.
+      </p>
+    </div>
+  </section>
+
+  <section id="Programacion">
+    <div class="card">
+      <h2>Que es la programación</h2>
+      <p>La programación es el proceso de diseñar y construir un conjunto de instrucciones para que una computadora realice tareas específicas.</p>
+      <ul>
+        <li>El objetivo comun de un programa es seguir una serie de pasos.
+            Recuerdas esa receta de cocina que te enseñaron en la escuela? Bueno, un programa es como una receta, pero en lugar de cocinar comida, le decimos a la computadora qué hacer.</li>
+            <!--Imagen referente a cocinar-->
+            <img src="public/images/cook.gif" alt="Receta de cocina" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
+        </li>
+        <li>La programacion te permite "pintar" esa pagina que tienes en mente, crear ese juego que se te ocurrio
+            o incluso hacer que tu computadora haga cosas por ti.
+          <!--Imagen referente a pintar-->
+          <img src="public/images/paint.gif" alt="Pintar" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
+          </li>
+        <li>La programación es una habilidad muy valiosa en el mundo actual, ya que muchas industrias dependen de la tecnología y el software para funcionar.</li>
+        <li> Programar no tiene por que ser una tarea aburrida, al contrario, es una forma de expresarte y crear cosas nuevas.</li>
+        <li>La programación es una habilidad que se puede aprender y mejorar con la práctica.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="java">
+    <div class="card">
+      <h2>Java Básico</h2>
+      <ul>
+        <li>¿Qué es Java?</li>
+        <li>Instalación de Java y tu primer programa</li>
+        <li>Variables y Tipos de Datos</li>
+        <li>Operadores y Control de flujo</li>
+        <li>Programación Orientada a Objetos (POO)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ejercicios">
+    <div class="card">
+      <h2>Ejercicios Prácticos</h2>
+      <p>Pronto encontrarás ejercicios para practicar cada tema de Java aquí.</p>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="card">
+      <h2>Proyectos Finales</h2>
+      <p>Ideas de mini-proyectos para poner en práctica tus conocimientos de programación.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="card">
+      <h2>Contacto</h2>
+      <p>Si tienes dudas o quieres clases personalizadas, ¡contáctame!</p>
+      <p>Tel: 3118668071</p>
+      <p>Email: kimfigueroa210004@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aprende Java con Kimberly Figueroa. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // JavaScript para resaltar el menú activo según el scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
