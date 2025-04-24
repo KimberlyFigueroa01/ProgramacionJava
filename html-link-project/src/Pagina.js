@@ -6,7 +6,7 @@ const path = require('path');
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-  const filePath = path.join(__dirname, req.url === '/' ? 'Pagina.html' : req.url);
+  const filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
   const extname = path.extname(filePath);
 
   // Mapear extensiones de archivo a tipos MIME
