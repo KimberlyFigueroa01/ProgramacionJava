@@ -1,86 +1,91 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<!DOCTYPE html> <!-- Version actual -->
+<html lang="es"> <!-- Etiqueta raiz -->
+<head>  <!-- Encabezado del documento -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aprende Java con Kimberly Figiueroa</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
+  <title>Aprende Java con Kimberly Figiueroa</title> <!-- Titulo de la pestaña -->
+  <style> 
+    body { /* Estilo del cuerpo de la pagina */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente de la pagina */
+      margin: 0; /* Margen de la pagina */
+      padding: 0; /* Relleno de la pagina */
+      background-color: #f2f2f2; /* Color de fondo de la pagina */
     }
-    header {
-      background-color: hsl(221, 52%, 58%);
-      color: white;
-      padding: 1rem;
-      text-align: center;
+    header { /* Estilo del encabezado de la pagina */
+      background-color: hsl(221, 52%, 58%); /* Color de fondo del encabezado */
+      color: white; /* Color del texto del encabezado */
+      padding: 1rem;  /* Relleno del encabezado */
+      text-align: center; /* Alineacion del texto del encabezado */
     }
-    nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    nav { /* Estilo de la barra de navegacion */
+      background-color: #333; /* Color de fondo de la barra de navegacion */
+      display: flex; /* Muestra la barra de navegacion como un contenedor flexible */
+      justify-content: center; /* Alineacion del contenido de la barra de navegacion */
+      flex-wrap: wrap; /* Permite que los elementos de la barra de navegacion se ajusten a la siguiente fila si no hay suficiente espacio */
+      position: sticky; /* Posiciona la barra de navegacion de manera fija */
+      top: 0; /* Posiciona la barra de navegacion en la parte superior de la pagina */
+      z-index: 1000; /* Asegura que la barra de navegacion este por encima de otros elementos */
     }
-    nav a {
-      color: white;
-      padding: 1rem;
-      text-decoration: none;
-      text-align: center;
-      transition: background-color 0.3s ease;
+
+    nav a { /* Estilo de los enlaces de la barra de navegacion */
+      color: white; /* Color del texto de los enlaces */
+      padding: 1rem; /* Relleno de los enlaces */
+      text-decoration: none; /* Elimina el subrayado de los enlaces */
+      text-align: center; /* Alineacion del texto de los enlaces */
+      transition: background-color 0.3s ease; /* Transicion suave para el color de fondo */
     }
-    nav a:hover, nav a.active {
-      background-color: #575757;
+
+    nav a:hover, nav a.active { /* Estilo de los enlaces al pasar el mouse o si son activos */
+      background-color: #575757; /* Color de fondo al pasar el mouse o si son activos */
     }
-    section {
-      padding: 1rem;
-      margin-bottom: 1rem;
+
+    section { /* Estilo de las secciones */
+      padding: 1rem; /* Relleno de las secciones */
+      margin-bottom: 1rem; /* Margen inferior de las secciones */
     }
-    .card {
-      background: white;
-      margin: 1rem auto;
-      padding: 1rem;
-      border-radius: 7px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 800px;
+
+    .card { /* Estilo de las tarjetas */
+      background: white; /* Color de fondo de las tarjetas */
+      margin: 1rem auto; /* Margen de las tarjetas */
+      padding: 1rem; /* Relleno de las tarjetas */
+      border-radius: 7px; /* Bordes redondeados de las tarjetas */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra de las tarjetas */
+      max-width: 800px; /* Ancho maximo de las tarjetas */
     }
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+
+    footer { /* Estilo del pie de pagina */
+      background-color: #333; /* Color de fondo del pie de pagina */
+      color: white; /* Color del texto del pie de pagina */
+      text-align: center; /* Alineacion del texto del pie de pagina */
+      padding: 1rem; /* Relleno del pie de pagina */
+      margin-top: 2rem; /* Margen superior del pie de pagina */
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Aprende Java desde Cero</h1>
-    <p>Por Kimberly Figueroa</p>
-  </header>
+  <header> <!-- Encabezado de la pagina -->
+    <h1>Aprende Java desde Cero</h1> <!-- Titulo de la pagina -->
+    <p>Por Kimberly Figueroa</p> <!-- Subtitulo de la pagina -->
+  </header> <!-- Fin del encabezado -->
 
-  <nav id="navbar">
-    <a href="#inicio">Inicio</a>
-    <a href="#Programacion">Programación</a>
-    <a href="#java">Java Básico</a>
-    <a href="#ejercicios">Ejercicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <nav id="navbar"> <!-- Barra de navegacion -->
+    <a href="#inicio">Inicio</a> <!-- Enlace a la seccion de inicio -->
+    <a href="#Programacion">Programación</a> <!-- Enlace a la seccion de programacion -->
+    <a href="#java">Java Básico</a> <!-- Enlace a la seccion de java basico -->
+    <a href="#ejercicios">Ejercicios</a> <!-- Enlace a la seccion de ejercicios -->
+    <a href="#proyectos">Proyectos</a> <!-- Enlace a la seccion de proyectos -->
+    <a href="#contacto">Contacto</a>  <!-- Enlace a la seccion de contacto -->
+  </nav> <!-- Fin de la barra de navegacion -->
 
-  <section id="inicio">
-    <div class="card">
-      <h2>Bienvenido/a</h2>
+  <section id="inicio"> <!-- Seccion de inicio -->
+    <div class="card"> <!-- Tarjeta de inicio -->
+      <h2>Bienvenido/a</h2> <!-- Titulo de la tarjeta de inicio -->
       <p>Te ayudaré a aprender Java desde cero, de una manera sencilla, práctica y paso a paso.
         Aprenderas sobre la sintaxis de Java, variables, tipos de datos, operadores, estructuras de control y mucho más.
-      </p>
-    </div>
-  </section>
+      </p> <!-- Descripcion de la tarjeta de inicio -->
+    </div> <!-- Fin de la tarjeta de inicio --> 
+  </section> <!-- Fin de la seccion de inicio -->
 
   <section id="Programacion">
     <div class="card">
@@ -109,7 +114,16 @@
       <h2>Java Básico</h2>
       <ul>
         <li>¿Qué es Java?</li>
-        <li>Instalación de Java y tu primer programa</li>
+        <p>Java es un lenguaje de programación de propósito general, orientado a objetos y diseñado para tener la menor cantidad de dependencias de implementación.</p>
+        <p>Java es un lenguaje de programación muy popular y ampliamente utilizado en el desarrollo de aplicaciones empresariales, aplicaciones móviles (Android) y mucho más.</p>
+        <p>Para hacer esto mas sencillo Java va a ser nuestra herramienta para aprender a expresar lo que imaginamos mediante un medio tecnologico, incluso podemos hacer juegos con el.</p>
+        <li>¿Como comenzar a programar?</li>
+        <p>Para comenzar a programar en Java, necesitarás instalar el JDK (Java Development Kit) en tu computadora. El JDK incluye todo lo necesario para desarrollar aplicaciones Java. 
+          Digamos que es como un "kit de herramientas" para programadores. Puedes descargarlo desde el sitio web oficial de Oracle: https://www.oracle.com/co/java/technologies/downloads/#jdk24-windows.</p>
+        </p>
+        <img src="images/oracle.png" alt="Oracle" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
+        <p>Una vez que hayas instalado el JDK, puedes escribir tu código Java en un editor de texto o en un entorno de desarrollo integrado (IDE) como Eclipse o IntelliJ IDEA.</p>
+        <li>Tu primer programa</li>
         <li>Variables y Tipos de Datos</li>
         <li>Operadores y Control de flujo</li>
         <li>Programación Orientada a Objetos (POO)</li>
@@ -140,29 +154,29 @@
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Aprende Java con Kimberly Figueroa. Todos los derechos reservados.</p>
-  </footer>
+  <footer> <!-- Pie de pagina -->
+    <p>&copy; 2025 Aprende Java con Kimberly Figueroa. Todos los derechos reservados.</p> <!-- Derechos de autor -->
+  </footer> <!-- Fin del pie de pagina -->
 
   <script>
     // JavaScript para resaltar el menú activo según el scroll
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("section"); // Selecciona todas las secciones
+    const navLinks = document.querySelectorAll("nav a"); // Selecciona todos los enlaces de navegación
 
-    window.addEventListener("scroll", () => {
-      let current = "";
+    window.addEventListener("scroll", () => { // Evento de desplazamiento
+      let current = ""; // Variable para almacenar la sección activa
 
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
-          current = section.getAttribute("id");
+      sections.forEach(section => { // Recorre cada sección
+        const sectionTop = section.offsetTop; // Obtiene la posición superior de la sección
+        if (pageYOffset >= sectionTop - 60) { // Verifica si la sección está en la parte superior de la ventana
+          current = section.getAttribute("id"); // Asigna el ID de la sección activa
         }
       });
 
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-          link.classList.add("active");
+      navLinks.forEach(link => { // Recorre cada enlace de navegación
+        link.classList.remove("active"); // Elimina la clase activa de todos los enlaces
+        if (link.getAttribute("href").includes(current)) { // Verifica si el enlace corresponde a la sección activa
+          link.classList.add("active"); // Agrega la clase activa al enlace correspondiente
         }
       });
     });
