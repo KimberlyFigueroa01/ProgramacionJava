@@ -114,139 +114,139 @@
     <div class="card">
       <h2>Java Básico</h2>
       <div id="contenidoPrimerQuiz">
-      <ul>
-        <li>¿Qué es Java?</li>
-        <p>Java es un lenguaje de programación de propósito general, orientado a objetos y diseñado para tener la menor cantidad de dependencias de implementación.
-          Ademas es un lenguaje de programación muy popular y ampliamente utilizado en el desarrollo de aplicaciones empresariales, aplicaciones móviles (Android) y mucho más.</p>
-        <p>Para hacer esto mas sencillo Java va a ser nuestra herramienta para aprender a expresar lo que imaginamos mediante un medio tecnologico, incluso podemos hacer juegos con el.</p>
-        <li>¿Como comenzar a programar?</li>
-        <p>Para comenzar a programar en Java, necesitarás instalar el JDK (Java Development Kit) en tu computadora. El JDK incluye todo lo necesario para desarrollar aplicaciones Java. 
-          Digamos que es como un "kit de herramientas" para programadores. 
-          Puedes descargar Java desde el sitio web oficial de Oracle: https://www.oracle.com/co/java/technologies/downloads/#jdk24-windows.</p>
-        </p>
-        <img src="images/oracle.png" alt="Oracle" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
-        <p>Una vez que hayas instalado el JDK, nos faltaria un un editor de texto o en un entorno de desarrollo integrado (IDE), digamoslo asi necesitamos una mesa de trabajo para comenzar a plasmar nuestras ideas.</p>
-        <p>Existen muchos editores de texto y IDEs disponibles, pero algunos de los más populares son:</p>
         <ul>
-          <li>IntelliJ IDEA -> https://www.jetbrains.com/idea/download/?section=windows</li>
-          <li>Eclipse -> https://eclipseide.org/</li>
-          <li>Visual Studio Code -> https://code.visualstudio.com/download</li>
+          <li>¿Qué es Java?</li>
+            <p>Java es un lenguaje de programación de propósito general, orientado a objetos y diseñado para tener la menor cantidad de dependencias de implementación.
+              Ademas es un lenguaje de programación muy popular y ampliamente utilizado en el desarrollo de aplicaciones empresariales, aplicaciones móviles (Android) y mucho más.</p>
+            <p>Para hacer esto mas sencillo Java va a ser nuestra herramienta para aprender a expresar lo que imaginamos mediante un medio tecnologico, incluso podemos hacer juegos con el.</p>
+          <li>¿Como comenzar a programar?</li>
+            <p>Para comenzar a programar en Java, necesitarás instalar el JDK (Java Development Kit) en tu computadora. El JDK incluye todo lo necesario para desarrollar aplicaciones Java. 
+              Digamos que es como un "kit de herramientas" para programadores. 
+              Puedes descargar Java desde el sitio web oficial de Oracle: https://www.oracle.com/co/java/technologies/downloads/#jdk24-windows.</p>
+            </p>
+            <img src="images/oracle.png" alt="Oracle" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
+            <p>Una vez que hayas instalado el JDK, nos faltaria un un editor de texto o en un entorno de desarrollo integrado (IDE), digamoslo asi necesitamos una mesa de trabajo para comenzar a plasmar nuestras ideas.</p>
+            <p>Existen muchos editores de texto y IDEs disponibles, pero algunos de los más populares son:</p>
+            <ul>
+              <li>IntelliJ IDEA -> https://www.jetbrains.com/idea/download/?section=windows</li>
+              <li>Eclipse -> https://eclipseide.org/</li>
+              <li>Visual Studio Code -> https://code.visualstudio.com/download</li>
+            </ul>
+            <p>Puedes instalar el que mas te sea comodo, yo usare Visual Studio Code.</p>
+            <p>En caso de que tengas alguna duda o inconveniente con alguno de los pasos anteriores puedes comunicarte con migo si estas en alguna clase con migo.</p>
+            <p>Una vez que tengas el JDK y un editor de texto o IDE instalado, ya estás listo para comenzar a programar en Java.</p>
+          <li>Primeros pasos</li>
+            <p>El primer programa que vamos a crear es el clásico "Hola, Mundo!". Este programa simplemente imprimirá un mensaje de saludo "Hola, Mundo!" en la consola.</p>
+            <p>Abre tu editor de texto o IDE y crea un nuevo archivo llamado HolaMundo.java. Asegúrate de que la extensión del archivo sea .java. En Visual Studio Code al abrirlo por primera vez podras observar un menu como el que se ve en la imagen. 
+              Si no lo ves puedes abrirlo desde la barra de menu en la parte superior izquierda, seleccionando "File" y luego "New File".</p>
+            <img src="images/vscode.png" alt="Visual Studio Code" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
+            <p>Damos click en la opcion de "New File...", se desplegara una ventana en la parte superior en la que vas a introducir el nombre de tu archivo "HolaMundo.java", luego solo elijes donde guardarlo y listo!</p>
+            <p>Listo una vez creado y abierto el archivo podemos observar un espacio grande en el que podemos escribir. Iremos escribiendo lo siguiente he ire explicando linea a linea</p>
+            <img src="images/HolaMundo.png" alt="Hola Mundo" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
+            <p>1. public class HolaMundo {</p>
+            <p>Esta línea define una clase llamada "HolaMundo". En Java, todo el código debe estar dentro de una clase, esto quiere decir que debe estar dentro de los corchetes { }. 
+              La palabra clave public significa que la clase es accesible desde cualquier parte del programa (mas adelante iremos explicando mas de esto).</p>
+            <p>2. public static void main(String[] args) {</p>
+            <p>Esta línea define el método principal (main) de la clase. El método main es el punto de entrada de cualquier programa Java. 
+              La palabra clave static significa que este método puede ser llamado sin crear una instancia de la clase, void significa que este método no devuelve ningún valor.
+              y tu diras, como no devuelve? pero ahi esta el HolaMundo, si pero veamoslo de esta forma, esta clase es como un individuo dando un monologo, mas no alguien que te de algo fisico
+              como un papel, un carton, etc.</p>
+            <p>3. System.out.println("Hola, Mundo!");</p>
+            <p>Esta línea imprime el mensaje "Hola, Mundo!" en la consola. System.out es un objeto que representa la salida estándar (la consola) y println es un método que imprime el mensaje seguido de un salto de línea.
+              ¿la consola? es como un lugar donde podemos ver lo que el programa nos dice, como un escenario donde el individuo da su monologo.</p>
+            <p>4. } // Fin del método main</p>
+            <p>Esta línea cierra el método main. Es importante cerrar todos los métodos y clases con sus respectivos corchetes como te he mencionado anteriormente.</p>
+            <p>Ahora lo que debemos hacer es simplemente ejecutar nuestro programa, y como hacemos esto?. Bueno hay un boton en la parte superior derecha que tiene un simbolo parecido al play de youtube.
+              Si lo presionas, el programa se ejecutara y veras el resultado en la parte inferior de la pantalla, en la consola.</p>
+            </p>
+      </div>
+
+          <section id="quiz">
+            <div class="card">
+              <h2>Preguntas</h2>
+              <button id="startQuiz" style="padding: 0.5rem 1rem; background-color: hsl(221, 52%, 58%); color: white; border: none; border-radius: 5px; cursor: pointer;">Realizar Quiz</button>
+            </div>
+          </section>
+
+          <!-- Modal para el quiz -->
+          <div id="quizModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+            <div style="background-color: white; padding: 2rem; border-radius: 10px; max-width: 600px; width: 90%;">
+              <h2>Quiz de Java</h2>
+              <form id="quizForm">
+                <p>1. ¿Que significa la palabra clave <code>static</code> en Java?</p>
+                <label><input type="radio" name="q1" value="correct">Permite llamar al método sin crear una instancia de la clase</label><br>
+                <label><input type="radio" name="q1" value="wrong">Define un tipo de dato</label><br>
+                <label><input type="radio" name="q1" value="wrong">Llama a un patito</label><br>
+
+                <p>2. ¿Que metodo usamos para imprimir por consola un mensaje?</p>
+                <label><input type="radio" name="q2" value="wrong">System.in.print()</label><br>
+                <label><input type="radio" name="q2" value="wrong">Console.log</label><br>
+                <label><input type="radio" name="q2" value="correct">System.out.println()</label><br>
+
+                <p>3. ¿Que extension debe tener el archivo donde vamos a programar con Java?</p>
+                <label><input type="radio" name="q3" value="wrong">.txt</label><br>
+                <label><input type="radio" name="q3" value="wrong">.class</label><br>
+                <label><input type="radio" name="q3" value="correct">.java</label><br>
+            </form>
+            <button id="evaluateQuiz" style="padding: 0.5rem 1rem; background-color: green; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Evaluar</button>
+            <button id="closeQuiz" style="padding: 0.5rem 1rem; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Salir</button>
+            <p id="quizResult" style="margin-top: 1rem; font-weight: bold;"></p>
+            </div>
+          </div>
+
+          <script>
+            //obtener elementos del DOM
+            const startQuizButton = document.getElementById("startQuiz");
+            const quizModal = document.getElementById("quizModal");
+            const closeQuizButton = document.getElementById("closeQuiz");
+            const evaluateQuizButton = document.getElementById("evaluateQuiz");
+            const quizForm = document.getElementById("quizForm");
+            const quizResult = document.getElementById("quizResult");
+            const mainContent = document.getElementById("contenidoPrimerQuiz"); // Obtener el elemento del DOM donde se encuentra el contenido del primer quiz
+            
+            //mostrar el modar y aplicar el efecto borroso
+            startQuizButton.addEventListener("click", () =>{
+              quizModal.style.display = "flex"; // Mostrar el modal
+              mainContent.style.filter = "blur(5px)"; // Aplicar efecto borroso al contenido principal
+            });
+
+            //cerrar el modal y quitar el efecto borroso
+            closeQuizButton.addEventListener("click", () => {
+              quizModal.style.display = "none"; // Ocultar el modal
+              mainContent.style.filter = "none"; // Quitar efecto borroso al contenido principal
+              quizResult.textContent = ""; // Limpiar el resultado del quiz
+              quizForm.reset(); // Reiniciar el formulario
+            });
+
+            // Evaluar el quiz
+            evaluateQuizButton.addEventListener("click", () => {
+              const formData = new FormData(quizForm); // Obtener los datos del formulario
+              let score = 0; // Inicializar la puntuación
+              let unanswered = false; // Inicializar la variable de preguntas sin responder
+
+            //verificar si hay preguntas sin responder
+            if(!formData.get("q1")) unanswered = true; // Verificar si la pregunta 1 no fue respondida
+            if(!formData.get("q2")) unanswered = true; // Verificar si la pregunta 2 no fue respondida
+            if(!formData.get("q3")) unanswered = true; // Verificar si la pregunta 3 no fue respondida
+
+              if(unanswered) {
+                quizResult.textContent = "Por favor, responde todas las preguntas."; // Alerta si hay preguntas sin responder
+                return;
+              }
+
+              // Evaluar las respuestas
+              if (formData.get("q1") === "correct") score++;
+              if (formData.get("q2") === "correct") score++;
+              if (formData.get("q3") === "correct") score++;
+            
+              // Mostrar el resultado
+              quizResult.textContent = `Tu puntuación es: ${score}/3`;
+            });
+          </script>
+          <li>Variables y Tipos de Datos</li>
+          <li>Operadores y Control de flujo</li>
+          <li>Programación Orientada a Objetos (POO)</li>
         </ul>
-        <p>Puedes instalar el que mas te sea comodo, yo usare Visual Studio Code.</p>
-        <p>En caso de que tengas alguna duda o inconveniente con alguno de los pasos anteriores puedes comunicarte con migo si estas en alguna clase con migo.</p>
-        <p>Una vez que tengas el JDK y un editor de texto o IDE instalado, ya estás listo para comenzar a programar en Java.</p>
-        <li>Primeros pasos</li>
-        <p>El primer programa que vamos a crear es el clásico "Hola, Mundo!". Este programa simplemente imprimirá un mensaje de saludo "Hola, Mundo!" en la consola.</p>
-        <p>Abre tu editor de texto o IDE y crea un nuevo archivo llamado HolaMundo.java. Asegúrate de que la extensión del archivo sea .java. En Visual Studio Code al abrirlo por primera vez podras observar un menu como el que se ve en la imagen. 
-          Si no lo ves puedes abrirlo desde la barra de menu en la parte superior izquierda, seleccionando "File" y luego "New File".</p>
-        <img src="images/vscode.png" alt="Visual Studio Code" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
-        <p>Damos click en la opcion de "New File...", se desplegara una ventana en la parte superior en la que vas a introducir el nombre de tu archivo "HolaMundo.java", luego solo elijes donde guardarlo y listo!</p>
-        <p>Listo una vez creado y abierto el archivo podemos observar un espacio grande en el que podemos escribir. Iremos escribiendo lo siguiente he ire explicando linea a linea</p>
-        <img src="images/HolaMundo.png" alt="Hola Mundo" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 2px;">
-        <p>1. public class HolaMundo {</p>
-        <p>Esta línea define una clase llamada "HolaMundo". En Java, todo el código debe estar dentro de una clase, esto quiere decir que debe estar dentro de los corchetes { }. 
-          La palabra clave public significa que la clase es accesible desde cualquier parte del programa (mas adelante iremos explicando mas de esto).</p>
-        <p>2. public static void main(String[] args) {</p>
-        <p>Esta línea define el método principal (main) de la clase. El método main es el punto de entrada de cualquier programa Java. 
-          La palabra clave static significa que este método puede ser llamado sin crear una instancia de la clase, void significa que este método no devuelve ningún valor.
-          y tu diras, como no devuelve? pero ahi esta el HolaMundo, si pero veamoslo de esta forma, esta clase es como un individuo dando un monologo, mas no alguien que te de algo fisico
-          como un papel, un carton, etc.</p>
-        <p>3. System.out.println("Hola, Mundo!");</p>
-        <p>Esta línea imprime el mensaje "Hola, Mundo!" en la consola. System.out es un objeto que representa la salida estándar (la consola) y println es un método que imprime el mensaje seguido de un salto de línea.
-          ¿la consola? es como un lugar donde podemos ver lo que el programa nos dice, como un escenario donde el individuo da su monologo.</p>
-        <p>4. } // Fin del método main</p>
-        <p>Esta línea cierra el método main. Es importante cerrar todos los métodos y clases con sus respectivos corchetes como te he mencionado anteriormente.</p>
-        <p>Ahora lo que debemos hacer es simplemente ejecutar nuestro programa, y como hacemos esto?. Bueno hay un boton en la parte superior derecha que tiene un simbolo parecido al play de youtube.
-          Si lo presionas, el programa se ejecutara y veras el resultado en la parte inferior de la pantalla, en la consola.</p>
-        </p>
-
-        <section id="quiz">
-          <div class="card">
-            <h2>Preguntas</h2>
-            <button id="startQuiz" style="padding: 0.5rem 1rem; background-color: hsl(221, 52%, 58%); color: white; border: none; border-radius: 5px; cursor: pointer;">Realizar Quiz</button>
-          </div>
-        </section>
-
-        <!-- Modal para el quiz -->
-        <div id="quizModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
-          <div style="background-color: white; padding: 2rem; border-radius: 10px; max-width: 600px; width: 90%;">
-            <h2>Quiz de Java</h2>
-            <form id="quizForm">
-              <p>1. ¿Que significa la palabra clave <code>static</code> en Java?</p>
-              <label><input type="radio" name="q1" value="correct">Permite llamar al método sin crear una instancia de la clase</label><br>
-              <label><input type="radio" name="q1" value="wrong">Define un tipo de dato</label><br>
-              <label><input type="radio" name="q1" value="wrong">Llama a un patito</label><br>
-
-              <p>2. ¿Que metodo usamos para imprimir por consola un mensaje?</p>
-              <label><input type="radio" name="q2" value="wrong">System.in.print()</label><br>
-              <label><input type="radio" name="q2" value="wrong">Console.log</label><br>
-              <label><input type="radio" name="q2" value="correct">System.out.println()</label><br>
-
-              <p>3. ¿Que extension debe tener el archivo donde vamos a programar con Java?</p>
-              <label><input type="radio" name="q3" value="wrong">.txt</label><br>
-              <label><input type="radio" name="q3" value="wrong">.class</label><br>
-              <label><input type="radio" name="q3" value="correct">.java</label><br>
-          </form>
-          <button id="evaluateQuiz" style="padding: 0.5rem 1rem; background-color: green; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Evaluar</button>
-          <button id="closeQuiz" style="padding: 0.5rem 1rem; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Salir</button>
-          <p id="quizResult" style="margin-top: 1rem; font-weight: bold;"></p>
-          </div>
-        </div>
-
-        <script>
-          //obtener elementos del DOM
-          const startQuizButton = document.getElementById("startQuiz");
-          const quizModal = document.getElementById("quizModal");
-          const closeQuizButton = document.getElementById("closeQuiz");
-          const evaluateQuizButton = document.getElementById("evaluateQuiz");
-          const quizForm = document.getElementById("quizForm");
-          const quizResult = document.getElementById("quizResult");
-          const mainContent = document.getElementById("contenidoPrimerQuiz"); // Obtener el elemento del DOM donde se encuentra el contenido del primer quiz
-          
-          //mostrar el modar y aplicar el efecto borroso
-          startQuizButton.addEventListener("click", () =>{
-            quizModal.style.display = "flex"; // Mostrar el modal
-            mainContent.style.filter = "blur(5px)"; // Aplicar efecto borroso al contenido principal
-          });
-
-          //cerrar el modal y quitar el efecto borroso
-          closeQuizButton.addEventListener("click", () => {
-            quizModal.style.display = "none"; // Ocultar el modal
-            mainContent.style.filter = "none"; // Quitar efecto borroso al contenido principal
-            quizResult.textContent = ""; // Limpiar el resultado del quiz
-            quizForm.reset(); // Reiniciar el formulario
-          });
-
-          // Evaluar el quiz
-          evaluateQuizButton.addEventListener("click", () => {
-            const formData = new FormData(quizForm); // Obtener los datos del formulario
-            let score = 0; // Inicializar la puntuación
-            let unanswered = false; // Inicializar la variable de preguntas sin responder
-
-           //verificar si hay preguntas sin responder
-           if(!formData.get("q1")) unanswered = true; // Verificar si la pregunta 1 no fue respondida
-           if(!formData.get("q2")) unanswered = true; // Verificar si la pregunta 2 no fue respondida
-           if(!formData.get("q3")) unanswered = true; // Verificar si la pregunta 3 no fue respondida
-
-            if(unanswered) {
-              quizResult.textContent = "Por favor, responde todas las preguntas."; // Alerta si hay preguntas sin responder
-              return;
-            }
-
-             // Evaluar las respuestas
-             if (formData.get("q1") === "correct") score++;
-             if (formData.get("q2") === "correct") score++;
-             if (formData.get("q3") === "correct") score++;
-          
-            // Mostrar el resultado
-            quizResult.textContent = `Tu puntuación es: ${score}/3`;
-          });
-        </script>
-        <li>Variables y Tipos de Datos</li>
-        <li>Operadores y Control de flujo</li>
-        <li>Programación Orientada a Objetos (POO)</li>
-      </ul>
-    </div>
 
   </section>
 
