@@ -157,7 +157,77 @@
         <p>Ahora lo que debemos hacer es simplemente ejecutar nuestro programa, y como hacemos esto?. Bueno hay un boton en la parte superior derecha que tiene un simbolo parecido al play de youtube.
           Si lo presionas, el programa se ejecutara y veras el resultado en la parte inferior de la pantalla, en la consola.</p>
         </p>
-        </p>
+
+        <section id="quiz">
+          <div class="card">
+            <h2>Preguntas</h2>
+            <button id="startQuiz" style="padding: 0.5rem 1rem; background-color: hsl(221, 52%, 58%); color: white; border: none; border-radius: 5px; cursor: pointer;">Realizar Quiz</button>
+          </div>
+        </section>
+
+        <!-- Modal para el quiz -->
+        <div id="quizModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+          <div style="background-color: white; padding: 2rem; border-radius: 10px; max-width: 600px; width: 90%;">
+            <h2>Quiz de Java</h2>
+            <form id="quizForm">
+              <p>1. ¿Que significa la palabra clave <code>static</code> en Java?</p>
+              <label><input type="radio" name="q1" value="correct">Permite llamar al método sin crear una instancia de la clase</label><br>
+              <label><input type="radio" name="q1" value="wrong">Define un tipo de dato</label><br>
+              <label><input type="radio" name="q1" value="wrong">Llama a un patito</label><br>
+
+              <p>2. ¿Que metodo usamos para imprimir por consola un mensaje?</p>
+              <label><input type="radio" name="q2" value="wrong">System.in.print()</label><br>
+              <label><input type="radio" name="q2" value="wrong">Console.log</label><br>
+              <label><input type="radio" name="q2" value="correct">System.out.println()</label><br>
+
+              <p>3. ¿Que extension debe tener el archivo donde vamos a programar con Java?</p>
+              <label><input type="radio" name="q3" value="wrong">.txt</label><br>
+              <label><input type="radio" name="q3" value="wrong">.class</label><br>
+              <label><input type="radio" name="q3" value="correct">.java</label><br>
+          </form>
+          <button id="evaluarQuiz" style="padding: 0.5rem 1rem; background-color: green; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Evaluar</button>
+          <button id="closeQuiz" style="padding: 0.5rem 1rem; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Salir</button>
+          <p id="quizResult" style="margin-top: 1rem; font-weight: bold;"></p>
+          </div>
+        </div>
+
+        <script>
+          //obtener elementos del DOM
+          const startQuizButton = document.getElementById("startQuiz");
+          const quizModal = document.getElementById("quizModal");
+          const closeQuizButton = document.getElementById("closeQuiz");
+          const evaluateQuizButton = document.getElementById("evaluarQuiz");
+          const quizForm = document.getElementById("quizForm");
+          const quizResult = document.getElementById("quizResult");
+          const body = document.body;
+
+          //mostrar el modar y aplicar el efecto borroso
+          startQuizButton.addEvenListener("click", () =>{
+            quizModal.style.display = "flex"; // Mostrar el modal
+            body.style.filter = "blur(5px)"; // Aplicar efecto borroso al fondo
+          });
+
+          //cerrar el modal y quitar el efecto borroso
+          closeQuizButton.addEventListener("click", () => {
+            quizModal.style.display = "none"; // Ocultar el modal
+            body.style.filter = "none"; // Quitar efecto borroso al fondo
+            quizResult.textContent = ""; // Limpiar el resultado del quiz
+          });
+
+          // Evaluar el quiz
+          evaluateQuizButton.addEventListener("click", () => {
+            const formData = new FormData(quizForm); // Obtener los datos del formulario
+            let score = 0; // Inicializar la puntuación
+
+            // Evaluar las respuestas
+            if (formData.get("q1") === "correct") score++;
+            if (formData.get("q2") === "correct") score++;
+            if (formData.get("q3") === "correct") score++;
+
+            // Mostrar el resultado
+            quizResult.textContent = `Tu puntuación es: ${score}/3`;
+          });
+        </script>
         <li>Variables y Tipos de Datos</li>
         <li>Operadores y Control de flujo</li>
         <li>Programación Orientada a Objetos (POO)</li>
