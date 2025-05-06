@@ -88,6 +88,7 @@
   </section> <!-- Fin de la seccion de inicio -->
 
   <section id="Programacion">
+    <div id="contenidoPrimerQuiz">
     <div class="card">
       <h2>Que es la programación</h2>
       <p>La programación es el proceso de diseñar y construir un conjunto de instrucciones para que una computadora realice tareas específicas.</p>
@@ -157,6 +158,7 @@
         <p>Ahora lo que debemos hacer es simplemente ejecutar nuestro programa, y como hacemos esto?. Bueno hay un boton en la parte superior derecha que tiene un simbolo parecido al play de youtube.
           Si lo presionas, el programa se ejecutara y veras el resultado en la parte inferior de la pantalla, en la consola.</p>
         </p>
+      </div>
 
         <section id="quiz">
           <div class="card">
@@ -185,7 +187,7 @@
               <label><input type="radio" name="q3" value="wrong">.class</label><br>
               <label><input type="radio" name="q3" value="correct">.java</label><br>
           </form>
-          <button id="evaluarQuiz" style="padding: 0.5rem 1rem; background-color: green; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Evaluar</button>
+          <button id="evaluateQuiz" style="padding: 0.5rem 1rem; background-color: green; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Evaluar</button>
           <button id="closeQuiz" style="padding: 0.5rem 1rem; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Salir</button>
           <p id="quizResult" style="margin-top: 1rem; font-weight: bold;"></p>
           </div>
@@ -201,8 +203,9 @@
           const quizResult = document.getElementById("quizResult");
           const body = document.body;
 
+          const mainContent = document.getElementById("contenidoPrimerQuiz"); // Obtener el elemento del DOM donde se encuentra el contenido del primer quiz
           //mostrar el modar y aplicar el efecto borroso
-          startQuizButton.addEvenListener("click", () =>{
+          startQuizButton.addEventListener("click", () =>{
             quizModal.style.display = "flex"; // Mostrar el modal
             body.style.filter = "blur(5px)"; // Aplicar efecto borroso al fondo
           });
@@ -212,18 +215,30 @@
             quizModal.style.display = "none"; // Ocultar el modal
             body.style.filter = "none"; // Quitar efecto borroso al fondo
             quizResult.textContent = ""; // Limpiar el resultado del quiz
+            quizForm.reset(); // Reiniciar el formulario
           });
 
           // Evaluar el quiz
           evaluateQuizButton.addEventListener("click", () => {
             const formData = new FormData(quizForm); // Obtener los datos del formulario
             let score = 0; // Inicializar la puntuación
+            let unanswered = false; // Inicializar la variable de preguntas sin responder
 
-            // Evaluar las respuestas
-            if (formData.get("q1") === "correct") score++;
-            if (formData.get("q2") === "correct") score++;
-            if (formData.get("q3") === "correct") score++;
+           //verificar si hay preguntas sin responder
+           if(!formData.get("q1")) unanswered = true; // Verificar si la pregunta 1 no fue respondida
+           if(!formData.get("q2")) unanswered = true; // Verificar si la pregunta 2 no fue respondida
+            if(!formData.get("q3")) unanswered = true; // Verificar si la pregunta 3 no fue respondida
 
+            if(unanswered) {
+              quizResult.textContent = "Por favor, responde todas las preguntas."; // Alerta si hay preguntas sin responder
+              return;
+            }
+
+             // Evaluar las respuestas
+             if (formData.get("q1") === "correct") score++;
+             if (formData.get("q2") === "correct") score++;
+             if (formData.get("q3") === "correct") score++;
+          
             // Mostrar el resultado
             quizResult.textContent = `Tu puntuación es: ${score}/3`;
           });
