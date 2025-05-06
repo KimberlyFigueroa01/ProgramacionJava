@@ -198,22 +198,21 @@
           const startQuizButton = document.getElementById("startQuiz");
           const quizModal = document.getElementById("quizModal");
           const closeQuizButton = document.getElementById("closeQuiz");
-          const evaluateQuizButton = document.getElementById("evaluarQuiz");
+          const evaluateQuizButton = document.getElementById("evaluateQuiz");
           const quizForm = document.getElementById("quizForm");
           const quizResult = document.getElementById("quizResult");
-          const body = document.body;
-
           const mainContent = document.getElementById("contenidoPrimerQuiz"); // Obtener el elemento del DOM donde se encuentra el contenido del primer quiz
+          
           //mostrar el modar y aplicar el efecto borroso
           startQuizButton.addEventListener("click", () =>{
             quizModal.style.display = "flex"; // Mostrar el modal
-            body.style.filter = "blur(5px)"; // Aplicar efecto borroso al fondo
+            mainContent.style.filter = "blur(5px)"; // Aplicar efecto borroso al contenido principal
           });
 
           //cerrar el modal y quitar el efecto borroso
           closeQuizButton.addEventListener("click", () => {
             quizModal.style.display = "none"; // Ocultar el modal
-            body.style.filter = "none"; // Quitar efecto borroso al fondo
+            mainContent.style.filter = "none"; // Quitar efecto borroso al contenido principal
             quizResult.textContent = ""; // Limpiar el resultado del quiz
             quizForm.reset(); // Reiniciar el formulario
           });
@@ -227,7 +226,7 @@
            //verificar si hay preguntas sin responder
            if(!formData.get("q1")) unanswered = true; // Verificar si la pregunta 1 no fue respondida
            if(!formData.get("q2")) unanswered = true; // Verificar si la pregunta 2 no fue respondida
-            if(!formData.get("q3")) unanswered = true; // Verificar si la pregunta 3 no fue respondida
+           if(!formData.get("q3")) unanswered = true; // Verificar si la pregunta 3 no fue respondida
 
             if(unanswered) {
               quizResult.textContent = "Por favor, responde todas las preguntas."; // Alerta si hay preguntas sin responder
