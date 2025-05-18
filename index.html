@@ -259,8 +259,25 @@
           <p>Ejemplo:</p>
           <p><code>int edad = 25;</code></p>
           <p>Esto significa que hemos creado una variable llamada "edad" de tipo entero y le hemos asignado el valor 25.</p>
+          <p>Para las variables que almacenan letras hacemos algo similar, solo que debemos usar comillas</p>
+          <p><code>String nombre = Kimberly;</code></p>
           <p>Recuerda que en Java, los nombres de las variables son sensibles a mayúsculas y minúsculas, lo que significa que "edad" y "Edad" son dos variables diferentes.</p>
           <p>Las variables son muy importantes porque nos permiten almacenar y manipular datos en nuestros programas. Puedes pensar en ellas como cajas donde guardamos nuestro producto que podemos usar más tarde.</p>
+          <li>Entrada y Salida de Datos</li>
+          <p>Para interactuar con el usuario, Java proporciona clases como Scanner para leer la entrada del usuario y System.out para imprimir mensajes en la consola.</p>
+          <p>Ejemplo de cómo usar Scanner para leer la entrada del usuario:</p>
+          <p><code>import java.util.Scanner;</code></p>
+          <p><code>public class EjemploScanner {</code></p>
+          <p><code>public static void main(String[] args) {</code></p>
+          <p><code>Scanner scanner = new Scanner(System.in);</code></p>
+          <p><code>System.out.print("Ingresa tu nombre: ");</code></p>
+          <p><code>String nombre = scanner.nextLine();</code></p>
+          <p><code>System.out.println("Hola, " + nombre + "!");</code></p>
+          <p><code>}</code></p>
+          <p><code>}</code></p>
+          <p>En este ejemplo, importamos la clase Scanner, creamos un objeto Scanner llamado "scanner" y usamos el método nextLine() para leer una línea de texto ingresada por el usuario.</p>
+          <p>Luego, imprimimos un saludo personalizado usando System.out.println(). Aqui como te puedes dar cuenta encerramos el texto "Hola, " entre parentesis, 
+            luego con un simbolo + agregamos el nombre que el usuario ingreso al texto y por ultimo agregamos un "!". Esto se conoce como concatenar</p>
           <li>Operadores y Control de flujo</li>
           <li>Programación Orientada a Objetos (POO)</li>
         </ul>
