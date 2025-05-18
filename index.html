@@ -74,6 +74,7 @@
     <a href="#Programacion">Programación</a> <!-- Enlace a la seccion de programacion -->
     <a href="#java">Java Básico</a> <!-- Enlace a la seccion de java basico -->
     <a href="#Variables">Variables</a> <!-- Enlace a la seccion de variables -->
+    <a href="#Operadores y control de flujo">Operadores y Control de flujo</a> <!-- Enlace a la seccion de operadores y control de flujo -->
     <a href="#proyectos">Proyectos</a> <!-- Enlace a la seccion de proyectos -->
     <a href="#contacto">Contacto</a>  <!-- Enlace a la seccion de contacto -->
   </nav> <!-- Fin de la barra de navegacion -->
@@ -261,6 +262,8 @@
             <li><strong>char</strong>: Un solo carácter (ejemplo: 'a', '1')</li>
             <li><strong>String</strong>: Cadena de texto (ejemplo: "Hola", "Java")</li>
             <li><strong>boolean</strong>: Verdadero o falso (ejemplo: true, false)</li>
+            <li><strong>byte</strong>: Números enteros pequeños (ejemplo: 100, -50)</li>
+            <li><strong>float</strong>: Números decimales pequeños (ejemplo: 3.14f, -0.5f)</li>
           </ul>
           <p>Para declarar una variable, usas la siguiente sintaxis:</p>
           <p><code>tipoDeDato nombreDeVariable = valor;</code></p>
@@ -271,6 +274,8 @@
           <p><code>String nombre = "Kimberly";</code></p>
           <p>Recuerda que en Java, los nombres de las variables son sensibles a mayúsculas y minúsculas, lo que significa que "edad" y "Edad" son dos variables diferentes.</p>
           <p>Las variables son muy importantes porque nos permiten almacenar y manipular datos en nuestros programas. Puedes pensar en ellas como cajas donde guardamos nuestro producto que podemos usar más tarde.</p>
+
+          <!--Seccion sobre la entrada y salida de datos-->
           <li>Entrada y Salida de Datos</li>
           <p>Para interactuar con el usuario, Java proporciona clases como Scanner para leer la entrada del usuario y System.out para imprimir mensajes en la consola.</p>
           <p>Ejemplo de cómo usar Scanner para leer la entrada del usuario:</p>
@@ -286,12 +291,14 @@
           <p>En este ejemplo, importamos la clase Scanner, creamos un objeto Scanner llamado "scanner" y usamos el método nextLine() para leer una línea de texto ingresada por el usuario.</p>
           <p>Luego, imprimimos un saludo personalizado usando System.out.println(). Aqui como te puedes dar cuenta encerramos el texto "Hola, " entre parentesis, 
             luego con un simbolo + agregamos el nombre que el usuario ingreso al texto y por ultimo agregamos un "!". Esto se conoce como concatenar</p>
+
+          <li>Ejercicio</li>
           <p>Puedes hacer el siguiente ejercicio para practicar un poco lo que has aprendido: Realiza un programa que le pida al usuario su nombre, edad y ciudad de recidencia. 
             Luego imprime un mensaje que diga "Hola, [nombre], tienes [edad] años y vives en [ciudad]."</p>
           
           <section id="solucionEjercicio">
             <div class="card">
-              <h2>Preguntas</h2>
+              <h2>Solucion ejercicio</h2>
               <button id="solucion" style="padding: 0.5rem 1rem; background-color: hsl(221, 52%, 58%); color: white; border: none; border-radius: 5px; cursor: pointer;">Ver solucion</button>
             </div>
           </section>
@@ -324,8 +331,6 @@
             const solucionButton = document.getElementById("solucion");
             const solucionModal = document.getElementById("solucionModal");
             const closeSolucionButton = document.getElementById("closeSolucion");
-            const solucionForm = document.getElementById("solucionForm");
-            const solucionResult = document.getElementById("solucionResult");
             
             // Mostrar el modal 
             solucionButton.addEventListener("click", () =>{
@@ -338,7 +343,22 @@
             });
           </script>
     </div>
+    <p>Ya puedes hacer muchas cosas con solo estas variables, deja que tu imaginacion te guie y comienza a practicar y apropiarte de los conceptos</p>
   </section>
+
+  <section id="Operadores y control de flujo">
+    <div class="card">
+      <h2>Operadores y Control de flujo</h2>
+      <p>Los operadores son símbolos que realizan operaciones en variables y valores. Algunos operadores comunes son:</p>
+      <ul>
+        <li><strong>+</strong>: Suma</li>
+        <li><strong>-</strong>: Resta</li>
+        <li><strong>*</strong>: Multiplicación</li>
+        <li><strong>/</strong>: División</li>
+        <li><strong>%</strong>: Módulo (resto de la división)</li>
+      </ul>
+      <p>El control de flujo se refiere a cómo se ejecutan las instrucciones en un programa. Puedes usar estructuras como if, else, switch, for y while para controlar el flujo de tu programa.</p>
+    </div>
 
   <section id="proyectos">
     <div class="card">
