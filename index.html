@@ -256,6 +256,8 @@
       <h2>Variables y tipos de datos</h2>
       <p>Las variables son contenedores que almacenan datos, digamos son como empaques, en cada empaque va un producto en especifico, un jugo, un ponque, una gomita, etc.
             En Java, debes declarar el tipo de dato de la variable (es como elejir el tipo de empaque para nuestro producto) antes de usarla. Algunos tipos de datos comunes son:</p>
+
+          <!--Lista de tipos de variables-->
           <ul>
             <li><strong>int</strong>: Números enteros (ejemplo: 5, -10)</li>
             <li><strong>double</strong>: Números decimales (ejemplo: 3.14, -0.5)</li>
@@ -265,15 +267,43 @@
             <li><strong>byte</strong>: Números enteros pequeños (ejemplo: 100, -50)</li>
             <li><strong>float</strong>: Números decimales pequeños (ejemplo: 3.14f, -0.5f)</li>
           </ul>
+
+          <!--Seccion sobre la sintaxis de declaracion de variables-->
           <p>Para declarar una variable, usas la siguiente sintaxis:</p>
+          <li>Si queremos que por defecto tengan un valor inicial: </li>
           <p><code>tipoDeDato nombreDeVariable = valor;</code></p>
+          <li>Si queremos que al principio este vacia y luego asignarle un valor: </li>
+          <p><code>tipoDeDato nombreDeVariable;</code></p>
+
+          <!--Ejemplo sobre como almacenar valores-->
           <p>Ejemplo:</p>
           <p><code>int edad = 25;</code></p>
           <p>Esto significa que hemos creado una variable llamada "edad" de tipo entero y le hemos asignado el valor 25.</p>
           <p>Para las variables que almacenan letras hacemos algo similar, solo que debemos usar comillas</p>
           <p><code>String nombre = "Kimberly";</code></p>
-          <p>Recuerda que en Java, los nombres de las variables son sensibles a mayúsculas y minúsculas, lo que significa que "edad" y "Edad" son dos variables diferentes.</p>
-          <p>Las variables son muy importantes porque nos permiten almacenar y manipular datos en nuestros programas. Puedes pensar en ellas como cajas donde guardamos nuestro producto que podemos usar más tarde.</p>
+
+          <!--Seccion sobre la importancia de las variables-->
+          <ul>
+            <li>Recuerda que en Java, los nombres de las variables son sensibles a mayúsculas y minúsculas, lo que significa que "edad" y "Edad" son dos variables diferentes.</li>
+            <li>Tambien es importante tener en cuenta que los nombres de las variables no se pueden repetir, esto causaria conflictos, ya que estariamos creando una variable duplicada</li>
+          </ul>
+
+          <!--Seccion sobre variables duplicadas-->
+          <p>Por ejemplo, si intentamos declarar dos variables con el mismo nombre:</p>
+          <p><code>int edad = 25;</code></p>
+          <p><code>int edad = 30;</code></p>
+          <p>Esto causaría un error porque ya hemos declarado una variable llamada "edad".</p>
+          <p>Si quieres cambiar el valor de una variable, simplemente asignas un nuevo valor:</p>
+          <p><code>edad = 30;</code></p>
+          <p>Ahora la variable "edad" tiene el valor 30.</p>
+
+          <!--Seccion sobre como imprimir el valor de una variable-->
+          <p>Ahora para mostrarle al usuario ese valor que hemos almacenado lo que hacemos es imprimir un mensaje como te he explicado anteriormente, pero esta vez fuera de las comillas vamos a poner <code>+ nombreDeVariable</code> para que el contenido que almacena esta variable se muestre en consola.</p>
+          <p>Por ejemplo:</p>
+          <p><code>System.out.println("La edad es: " + edad);</code></p>
+          <p>Esto imprimirá "La edad es: 30" en la consola.</p>
+          <p>Recuerda que las variables son muy importantes porque nos permiten almacenar y manipular datos en nuestros programas. Puedes pensar en ellas como cajas donde guardamos nuestro producto que podemos usar más tarde.</p>
+
 
           <!--Seccion sobre la entrada y salida de datos-->
           <li>Entrada y Salida de Datos</li>
@@ -281,12 +311,12 @@
           <p>Ejemplo de cómo usar Scanner para leer la entrada del usuario:</p>
           <p><code>import java.util.Scanner;</code></p>
           <p><code>public class EjemploScanner {</code></p>
-          <p><code>public static void main(String[] args) {</code></p>
-          <p><code>Scanner scanner = new Scanner(System.in);</code></p>
-          <p><code>System.out.print("Ingresa tu nombre: ");</code></p>
-          <p><code>String nombre = scanner.nextLine();</code></p>
-          <p><code>System.out.println("Hola, " + nombre + "!");</code></p>
-          <p><code>}</code></p>
+          <p><code> public static void main(String[] args) {</code></p>
+          <p><code>   Scanner scanner = new Scanner(System.in);</code></p>
+          <p><code>   System.out.print("Ingresa tu nombre: ");</code></p>
+          <p><code>   String nombre = scanner.nextLine();</code></p>
+          <p><code>   System.out.println("Hola, " + nombre + "!");</code></p>
+          <p><code> }</code></p>
           <p><code>}</code></p>
           <p>En este ejemplo, importamos la clase Scanner, creamos un objeto Scanner llamado "scanner" y usamos el método nextLine() para leer una línea de texto ingresada por el usuario.</p>
           <p>Luego, imprimimos un saludo personalizado usando System.out.println(). Aqui como te puedes dar cuenta encerramos el texto "Hola, " entre parentesis, 
@@ -303,25 +333,34 @@
             </div>
           </section>
 
-          <!-- Modal para el quiz -->
+          <!-- Modal para solucion del ejercicio -->
           <div id="solucionModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
             <div style="background-color: white; padding: 2rem; border-radius: 10px; max-width: 600px; width: 90%;">
               <h2>Solucion del ejercicio</h2>
               <form id="solucionForm">
                 <p>import java.util.Scanner;</p>
                 <p>public class Ejercicio {</p>
-                <p>public static void main(String[] args) {</p>
-                <p>Scanner scanner = new Scanner(System.in);</p>
-                <p>System.out.print("Ingresa tu nombre: ");</p>
-                <p>String nombre = scanner.nextLine();</p>
-                <p>System.out.print("Ingresa tu edad: ");</p>
-                <p>int edad = scanner.nextInt();</p>
-                <p>scanner.nextLine(); // Limpiar el buffer de entrada</p>
-                <p>System.out.print("Ingresa tu ciudad: ");</p>
-                <p>String ciudad = scanner.nextLine();</p>
-                <p>System.out.println("Hola, " + nombre + ", tienes " + edad + " años y vives en " + ciudad + ".");</p>
+                <p> public static void main(String[] args) {</p>
+                <p>   Scanner scanner = new Scanner(System.in);</p>
+                <p>   System.out.print("Ingresa tu nombre: ");</p>
+                <p>   String nombre = scanner.nextLine();</p>
+                <p>   System.out.print("Ingresa tu edad: ");</p>
+                <p>   int edad = scanner.nextInt();</p>
+                <p>   scanner.nextLine(); // Limpiar el buffer de entrada</p>
+                <p>   System.out.print("Ingresa tu ciudad: ");</p>
+                <p>   String ciudad = scanner.nextLine();</p>
+                <p>   System.out.println("Hola, " + nombre + ", tienes " + edad + " años y vives en " + ciudad + ".");</p>
+                <p> }</p>
                 <p>}</p>
-                <p>}</p>
+              </form>
+              <button id="ejecutarSolucion" style="padding: 0.5rem 1rem; background-color: rgb(0, 43, 128); color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Ejecutar solucion</button>
+              <div id="simuladorJava" style="margin-top: 1rem; display: none;">
+                <div id="consolaJava" style="background: #222; color: #0f0; padding: 1rem; border-radius: 5px; font-family: 'Consolas', monospace; min-height: 120px;">
+                  <span id="consolaTexto"></span>
+                  <input id="consolaInput" type="text" style="background: #111; color: #0f0; border: none; border-bottom: 1px solid #0f0; outline: none; font-family: 'Consolas', monospace; width: 80%;" autocomplete="off">
+                </div>
+                <div id="consolaSalida" style="margin-top: 1rem; font-weight: bold; color: #222;"></div>
+              </div>
                 <button id="closeSolucion" style="padding: 0.5rem 1rem; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Cerrar solucion</button>
             </div>
           </div>
@@ -331,16 +370,102 @@
             const solucionButton = document.getElementById("solucion");
             const solucionModal = document.getElementById("solucionModal");
             const closeSolucionButton = document.getElementById("closeSolucion");
-            
-            // Mostrar el modal 
-            solucionButton.addEventListener("click", () =>{
-              solucionModal.style.display = "flex"; // Mostrar el modal
-            });
+            const ejecutarSolucionButton = document.getElementById("ejecutarSolucion");
+            const simuladorJava = document.getElementById("simuladorJava");
+            const consolaJava = document.getElementById("consolaJava");
+            const consolaTexto = document.getElementById("consolaTexto");
+            const consolaInput = document.getElementById("consolaInput");
+            const consolaSalida = document.getElementById("consolaSalida");
 
-            // Cerrar el modal
-            closeSolucionButton.addEventListener("click", () => {
-              solucionModal.style.display = "none"; // Ocultar el modal
-            });
+            let paso = 0;
+            let nombre = "";
+            let edad = "";
+            let ciudad = "";
+
+             function iniciarSimulador() {
+              paso = 0;
+              nombre = "";
+              edad = "";
+              ciudad = "";
+              consolaSalida.textContent = "";
+              consolaInput.value = "";
+              consolaInput.type = "text";
+              consolaInput.disabled = false;
+              mostrarPaso();
+              consolaInput.focus();
+            }
+            
+            function mostrarPaso() {
+              if (paso === 0) {
+                consolaTexto.textContent = 'Ingresa tu nombre: ';
+                consolaInput.value = "";
+                consolaInput.type = "text";
+              } else if (paso === 1) {
+                consolaTexto.textContent = 'Ingresa tu edad: ';
+                consolaInput.value = "";
+                consolaInput.type = "number";
+              } else if (paso === 2) {
+                consolaTexto.textContent = 'Ingresa tu ciudad: ';
+                consolaInput.value = "";
+                consolaInput.type = "text";
+              } else if (paso === 3) {
+                consolaTexto.textContent = '';
+                consolaInput.style.display = "none";
+                consolaSalida.textContent = `Hola, ${nombre}, tienes ${edad} años y vives en ${ciudad}.`;
+              }
+            }
+
+             consolaInput.addEventListener("keydown", function(e) {
+                if (e.key === "Enter") {
+                  if (paso === 0) {
+                    if (!consolaInput.value.trim()) {
+                      consolaSalida.textContent = "Por favor, ingresa tu nombre.";
+                      return;
+                    }
+                    nombre = consolaInput.value.trim();
+                    consolaSalida.textContent = "";
+                    paso++;
+                    mostrarPaso();
+                  } else if (paso === 1) {
+                    if (!consolaInput.value.trim()) {
+                      consolaSalida.textContent = "Por favor, ingresa tu edad.";
+                      return;
+                    }
+                    edad = consolaInput.value.trim();
+                    consolaSalida.textContent = "";
+                    paso++;
+                    mostrarPaso();
+                  } else if (paso === 2) {
+                    if (!consolaInput.value.trim()) {
+                      consolaSalida.textContent = "Por favor, ingresa tu ciudad.";
+                      return;
+                    }
+                    ciudad = consolaInput.value.trim();
+                    consolaSalida.textContent = "";
+                    paso++;
+                    mostrarPaso();
+                  }
+                }
+              });
+              
+              ejecutarSolucionButton.addEventListener("click", () => {
+                simuladorJava.style.display = "block";
+                consolaInput.style.display = "inline";
+                iniciarSimulador();
+              });
+
+              // Al abrir/cerrar el modal, reinicia el simulador
+              solucionButton.addEventListener("click", () => {
+                solucionModal.style.display = "flex";
+                simuladorJava.style.display = "none";
+                consolaSalida.textContent = "";
+              });
+              closeSolucionButton.addEventListener("click", () => {
+                simuladorJava.style.display = "none";
+                consolaSalida.textContent = "";
+                solucionModal.style.display = "none"; // Ocultar el modal
+              });
+
           </script>
           <p>Ya puedes hacer muchas cosas con solo estas variables, deja que tu imaginacion te guie y comienza a practicar y apropiarte de los conceptos</p>
     </div>
